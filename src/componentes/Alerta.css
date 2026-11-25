@@ -1,0 +1,46 @@
+.alerta {
+  display: flex;
+  gap: 0.75rem;
+  padding: var(--espaco-medio);
+  border: 1px solid transparent;
+  border-radius: var(--raio-cartao);
+}
+
+.alerta__icone {
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.alerta__corpo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.alerta__titulo {
+  font-weight: 700;
+}
+
+.alerta--info {
+  color: var(--cor-marinho);
+  background-color: var(--cor-fundo-claro);
+  border-color: var(--cor-azul-medio);
+}
+
+.alerta--sucesso {
+  color: var(--cor-situacao-resolvida-texto);
+  background-color: var(--cor-situacao-resolvida-fundo);
+  border-color: var(--cor-verde);
+}
+
+.alerta--aviso {
+  color: var(--cor-situacao-analise-texto);
+  background-color: var(--cor-situacao-analise-fundo);
+  border-color: var(--cor-amarelo);
+}
+
+.alerta--erro {
+  color: var(--cor-situacao-nao-solucionada-texto);
+  background-color: var(--cor-erro-fundo);
+  border-color: var(--cor-erro);
+}

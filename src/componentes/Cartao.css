@@ -1,0 +1,6 @@
+.cartao {
+  padding: var(--espaco-medio);
+  background-color: var(--cor-fundo-claro);
+  border-radius: var(--raio-cartao);
+  box-shadow: var(--sombra-cartao);
+}

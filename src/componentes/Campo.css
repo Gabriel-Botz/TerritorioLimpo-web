@@ -1,0 +1,50 @@
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.campo__rotulo {
+  font-weight: 600;
+}
+
+.campo__marca {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: var(--cor-texto-suave);
+}
+
+.campo__dica {
+  font-size: 0.875rem;
+  color: var(--cor-texto-suave);
+}
+
+.campo__erro {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--cor-erro);
+}
+
+.campo input,
+.campo textarea,
+.campo select {
+  width: 100%;
+  min-height: var(--altura-botao-minima);
+  padding: 0.5rem 0.75rem;
+  color: var(--cor-texto);
+  background-color: var(--cor-branco);
+  border: 1px solid var(--cor-borda-campo);
+  border-radius: var(--raio-botao);
+}
+
+.campo textarea {
+  min-height: 6rem;
+  resize: vertical;
+}
+
+.campo--erro input,
+.campo--erro textarea,
+.campo--erro select {
+  border-color: var(--cor-erro);
+  border-width: 2px;
+}

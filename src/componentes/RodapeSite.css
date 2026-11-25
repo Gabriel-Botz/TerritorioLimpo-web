@@ -1,0 +1,54 @@
+.rodape {
+  color: var(--cor-branco);
+  background-color: var(--cor-marinho);
+}
+
+.rodape a {
+  color: var(--cor-branco);
+}
+
+.rodape__principal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: var(--espaco-grande);
+}
+
+.rodape__unidade {
+  font-weight: 700;
+}
+
+.rodape__slogan {
+  margin-top: 0.25rem;
+}
+
+.rodape__painel {
+  font-size: 0.875rem;
+  text-underline-offset: 0.2em;
+}
+
+.rodape__realizacao {
+  color: var(--cor-marinho);
+  background-color: var(--cor-fundo-claro);
+}
+
+.rodape__realizacao-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  padding-block: var(--espaco-medio);
+}
+
+.rodape__realizacao-rotulo {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--cor-texto-suave);
+}
+
+.rodape__realizacao img {
+  width: 13.75rem;
+  height: auto;
+}

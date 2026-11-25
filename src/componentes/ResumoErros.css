@@ -1,0 +1,27 @@
+.resumo-erros {
+  padding: var(--espaco-medio);
+  color: var(--cor-texto);
+  background-color: var(--cor-erro-fundo);
+  border: 2px solid var(--cor-erro);
+  border-radius: var(--raio-cartao);
+}
+
+.resumo-erros__titulo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+  color: var(--cor-erro);
+}
+
+.resumo-erros ul {
+  margin-top: 0.5rem;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.resumo-erros a {
+  font-weight: 600;
+}
