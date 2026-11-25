@@ -1,0 +1,55 @@
+/* Emblemas de situação e prioridade: fundo claro + texto escuro (≥ 4,5:1). */
+
+.emblema {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.35;
+  border-radius: 999px;
+}
+
+/* Situações */
+.emblema--recebida {
+  color: var(--cor-situacao-recebida-texto);
+  background-color: var(--cor-situacao-recebida-fundo);
+}
+
+.emblema--em-analise {
+  color: var(--cor-situacao-analise-texto);
+  background-color: var(--cor-situacao-analise-fundo);
+}
+
+.emblema--encaminhada,
+.emblema--aguardando-atendimento {
+  color: var(--cor-situacao-encaminhada-texto);
+  background-color: var(--cor-situacao-encaminhada-fundo);
+}
+
+.emblema--resolvida {
+  color: var(--cor-situacao-resolvida-texto);
+  background-color: var(--cor-situacao-resolvida-fundo);
+}
+
+.emblema--nao-solucionada {
+  color: var(--cor-situacao-nao-solucionada-texto);
+  background-color: var(--cor-situacao-nao-solucionada-fundo);
+}
+
+/* Prioridades */
+.emblema--baixa {
+  color: var(--cor-prioridade-baixa-texto);
+  background-color: var(--cor-prioridade-baixa-fundo);
+}
+
+.emblema--media {
+  color: var(--cor-prioridade-media-texto);
+  background-color: var(--cor-prioridade-media-fundo);
+}
+
+.emblema--alta {
+  color: var(--cor-prioridade-alta-texto);
+  background-color: var(--cor-prioridade-alta-fundo);
+}

@@ -1,0 +1,133 @@
+.layout-admin {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* Menu lateral */
+.menu-admin {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  width: 16rem;
+  flex-shrink: 0;
+  padding: var(--espaco-medio);
+  color: var(--cor-branco);
+  background-color: var(--cor-marinho);
+}
+
+.menu-admin a {
+  color: var(--cor-branco);
+}
+
+.menu-admin__marca {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding-bottom: var(--espaco-medio);
+  margin-bottom: var(--espaco-pequeno);
+  border-bottom: 1px solid var(--cor-azul-medio);
+}
+
+.menu-admin__marca img {
+  width: 2.75rem;
+  height: auto;
+}
+
+.menu-admin__marca strong {
+  display: block;
+  line-height: 1.25;
+}
+
+.menu-admin__marca small {
+  font-size: 0.875rem;
+}
+
+.menu-admin__item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  min-height: var(--altura-botao-minima);
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  border-radius: var(--raio-botao);
+}
+
+.menu-admin__item:hover {
+  background-color: var(--cor-marinho-escuro);
+}
+
+.menu-admin__item--ativo {
+  font-weight: 700;
+  background-color: var(--cor-marinho-escuro);
+}
+
+.menu-admin__sair {
+  margin-top: auto;
+}
+
+/* Coluna principal */
+.layout-admin__coluna {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.topo-admin {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem var(--espaco-medio);
+  background-color: var(--cor-branco);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.topo-admin__identidade {
+  font-weight: 600;
+  margin-right: auto;
+}
+
+.topo-admin__menu-botao {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: var(--altura-botao-minima);
+  padding: 0.5rem 0.875rem;
+  font-weight: 600;
+  color: var(--cor-marinho);
+  background-color: transparent;
+  border: 1px solid var(--cor-marinho);
+  border-radius: var(--raio-botao);
+  cursor: pointer;
+}
+
+.layout-admin__conteudo {
+  flex: 1;
+  padding: var(--espaco-grande) var(--espaco-medio);
+  background-color: var(--cor-branco);
+}
+
+/* Celular: menu em botão, empilhado */
+@media (max-width: 47.99rem) {
+  .layout-admin {
+    flex-direction: column;
+  }
+
+  .menu-admin {
+    display: none;
+    width: 100%;
+  }
+
+  .menu-admin--aberto {
+    display: flex;
+  }
+
+  .topo-admin__menu-botao {
+    display: inline-flex;
+  }
+
+  .topo-admin__sair {
+    display: none;
+  }
+}
