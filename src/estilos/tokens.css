@@ -1,0 +1,69 @@
+/*
+ * Tokens do Território Limpo.
+ * Única fonte de cores do projeto: componentes usam somente estas variáveis.
+ *
+ * Contraste (WCAG 2.2 AA): texto normal ≥ 4,5:1; texto grande e componentes
+ * de interface ≥ 3:1. Os pares obrigatórios são verificados em tokens.test.ts.
+ *
+ * --cor-azul-medio, --cor-verde e --cor-amarelo são APENAS detalhes gráficos
+ * (ícones e bordas ao lado de texto), nunca fundo de texto branco.
+ */
+
+:root {
+  /* Cores institucionais */
+  --cor-marinho: #073b70;
+  --cor-marinho-escuro: #052e56;
+  --cor-branco: #ffffff;
+  --cor-fundo-claro: #eaf3fa;
+  --cor-azul-medio: #4c91c9;
+  --cor-verde: #70b77e;
+  --cor-amarelo: #f2c66d;
+  --cor-texto: #0f172a;
+  --cor-texto-suave: #475569;
+  --cor-borda: #e2e8f0;
+  --cor-borda-campo: #64748b;
+  --cor-erro: #9b1c1c;
+  --cor-erro-escuro: #7f1d1d;
+  --cor-erro-fundo: #fdecec;
+
+  /* Emblemas de situação (fundo claro + texto escuro) */
+  --cor-situacao-recebida-fundo: #edf1f6;
+  --cor-situacao-recebida-texto: #334155;
+  --cor-situacao-analise-fundo: #fcf1dc;
+  --cor-situacao-analise-texto: #78350f;
+  --cor-situacao-encaminhada-fundo: #e1effb;
+  --cor-situacao-encaminhada-texto: #1d4ed8;
+  --cor-situacao-resolvida-fundo: #e3f2e7;
+  --cor-situacao-resolvida-texto: #14532d;
+  --cor-situacao-nao-solucionada-fundo: #fdecec;
+  --cor-situacao-nao-solucionada-texto: #9b1c1c;
+
+  /* Emblemas de prioridade (fundo claro + texto escuro) */
+  --cor-prioridade-baixa-fundo: #e3f2e7;
+  --cor-prioridade-baixa-texto: #14532d;
+  --cor-prioridade-media-fundo: #fcf1dc;
+  --cor-prioridade-media-texto: #78350f;
+  --cor-prioridade-alta-fundo: #fdecec;
+  --cor-prioridade-alta-texto: #9b1c1c;
+
+  /* Tipografia */
+  --fonte-principal: 'Inter Variable', system-ui, sans-serif;
+  --tamanho-base: 1rem;
+  --entrelinha: 1.5;
+
+  /* Formas e sombras */
+  --raio-cartao: 0.75rem;
+  --raio-botao: 0.5rem;
+  --sombra-cartao: 0 1px 3px rgb(15 23 42 / 0.08), 0 1px 2px rgb(15 23 42 / 0.06);
+
+  /* Espaçamento */
+  --espaco-pequeno: 0.5rem;
+  --espaco-medio: 1rem;
+  --espaco-grande: 2rem;
+  --espaco-enorme: 3rem;
+
+  /* Dimensões */
+  --altura-botao-minima: 2.75rem; /* 44 px — alvo de toque */
+  --largura-conteudo: 70rem;
+  --largura-formulario: 40rem;
+}

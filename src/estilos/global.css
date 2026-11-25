@@ -1,0 +1,96 @@
+/* Reset e estilos globais do Território Limpo. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Cabeçalhos não podem cobrir o elemento focado (WCAG 2.4.11). */
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  font-size: var(--tamanho-base);
+  line-height: var(--entrelinha);
+  color: var(--cor-texto);
+  background-color: var(--cor-branco);
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 1.3rem + 2vw, 2.5rem);
+}
+
+h2 {
+  font-size: clamp(1.375rem, 1.15rem + 1vw, 1.75rem);
+}
+
+h3 {
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.3125rem);
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a {
+  color: var(--cor-marinho);
+}
+
+/* Foco visível: anel duplo (branco + azul-marinho), legível em qualquer fundo. */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--cor-marinho);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--cor-branco);
+}
+
+/* Títulos programaticamente focáveis na troca de rota. */
+h1[tabindex='-1']:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Movimento: respeitar a preferência do sistema. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

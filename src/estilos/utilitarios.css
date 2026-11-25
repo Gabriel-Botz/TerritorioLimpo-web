@@ -1,0 +1,37 @@
+/* Utilitários reutilizados em várias telas. */
+
+/* Texto visível só para leitores de tela (WCAG 1.1.1 / 1.3.2). */
+.texto-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Link "Ir para o conteúdo": escondido até receber foco. */
+.pular-conteudo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  color: var(--cor-branco);
+  background-color: var(--cor-marinho);
+  border-radius: 0 0 var(--raio-botao) 0;
+  transform: translateY(-150%);
+}
+
+.pular-conteudo:focus {
+  transform: translateY(0);
+}
+
+/* Contêiner centralizado de página. */
+.folha {
+  width: min(100% - 2rem, var(--largura-conteudo));
+  margin-inline: auto;
+}
