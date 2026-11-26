@@ -31,4 +31,6 @@ export type {
   ResultadoRegistro,
 } from './ocorrencia'
 export type { Indicadores } from './indicadores'
+export type { FotoRascunho, RascunhoRegistro } from './formulario'
+export { rascunhoInicial } from './formulario'
 export type { Pagina } from './pagina'
