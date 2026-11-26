@@ -292,6 +292,9 @@ export function RegistrarOcorrencia() {
     }
   }
 
+  const erroLocalizacao = erroDe('registro-localizacao')
+  const erroBlocoFotos = erroDe('registro-fotos')
+
   const descricoesFotos = [
     'registro-fotos-dica',
     erroFoto ? 'registro-fotos-erro' : null,
@@ -331,7 +334,14 @@ export function RegistrarOcorrencia() {
             <ResumoErros erros={erros} />
 
             {/* 1. Fotos */}
-            <section className="registro__bloco" id="registro-fotos" tabIndex={-1}>
+            <section
+              className="registro__bloco"
+              id="registro-fotos"
+              tabIndex={-1}
+              aria-describedby={
+                erroBlocoFotos !== null ? 'registro-fotos-bloco-erro' : undefined
+              }
+            >
               <h2 className="registro__bloco-titulo">
                 <span className="registro__num" aria-hidden="true">
                   1
@@ -342,6 +352,11 @@ export function RegistrarOcorrencia() {
                 Até {LIMITES.fotos} fotos em JPEG ou PNG, de até {LIMITES.fotoMb} MB
                 cada. A imagem é reduzida antes do envio.
               </p>
+              {erroBlocoFotos !== null && (
+                <p className="campo__erro" id="registro-fotos-bloco-erro">
+                  {erroBlocoFotos}
+                </p>
+              )}
               <input
                 className="registro__input-oculto"
                 type="file"
@@ -396,6 +411,9 @@ export function RegistrarOcorrencia() {
               className="registro__bloco"
               id="registro-localizacao"
               tabIndex={-1}
+              aria-describedby={
+                erroLocalizacao !== null ? 'registro-localizacao-erro' : undefined
+              }
             >
               <h2 className="registro__bloco-titulo">
                 <span className="registro__num" aria-hidden="true">
@@ -406,6 +424,11 @@ export function RegistrarOcorrencia() {
               <p className="campo__dica">
                 Informe ao menos uma forma: GPS, rua e número ou ponto de referência.
               </p>
+              {erroLocalizacao !== null && (
+                <p className="campo__erro" id="registro-localizacao-erro">
+                  {erroLocalizacao}
+                </p>
+              )}
 
               <div className="registro__gps">
                 <p className="campo__dica" id="registro-gps-explicacao">

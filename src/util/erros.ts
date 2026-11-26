@@ -10,7 +10,7 @@ import type { ErroTela } from '../componentes/ResumoErros'
 /** id da tela (DOM) por nome de campo do contrato, em minúsculas. */
 const mapaCampos: Record<string, string> = {
   type: 'registro-tipo',
-  estimatedvolume: 'registro-tipo',
+  estimatedvolume: 'registro-volume',
   collectionacesso: 'registro-acesso',
   drenagemrisk: 'registro-drenagem',
   observacaos: 'registro-observacoes',
@@ -18,8 +18,8 @@ const mapaCampos: Record<string, string> = {
   longitude: 'registro-localizacao',
   coordinatespairvalid: 'registro-localizacao',
   localizacaopresent: 'registro-localizacao',
-  adressetext: 'registro-endereco',
-  referenciapoint: 'registro-referencia',
+  addresstext: 'registro-localizacao',
+  referenciapoint: 'registro-localizacao',
   fotos: 'registro-fotos',
   'idempotency-key': 'registro-geral',
   body: 'registro-geral',
