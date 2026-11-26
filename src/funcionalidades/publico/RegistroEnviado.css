@@ -1,0 +1,65 @@
+/* Confirmação do registro (Fase 2). */
+
+.enviado {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-medio);
+  max-width: var(--largura-formulario);
+  margin-inline: auto;
+  width: 100%;
+}
+
+.enviado__protocolo {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--cor-marinho);
+}
+
+.enviado__dados {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+  padding: var(--espaco-medio);
+  background-color: var(--cor-fundo-claro);
+  border-radius: var(--raio-cartao);
+}
+
+.enviado__dados > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.125rem;
+}
+
+.enviado__dados dt {
+  font-weight: 600;
+}
+
+.enviado__dados dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.enviado__orientacao {
+  margin: 0;
+  font-size: 1.0625rem;
+}
+
+.enviado__botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-medio);
+}
+
+.enviado__nota {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--cor-texto-suave);
+}
+
+@media (min-width: 30rem) {
+  .enviado__dados > div {
+    grid-template-columns: 10rem 1fr;
+    gap: 0.5rem;
+  }
+}

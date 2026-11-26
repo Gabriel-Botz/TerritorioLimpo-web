@@ -5,8 +5,8 @@
 
 export const titulosRotas: Record<string, string> = {
   '/': 'Início',
-  '/registrar': 'Registrar ponto',
-  '/registro-enviado': 'Registro recebido',
+  '/registrar': 'Registrar ponto de descarte',
+  '/registro-enviado': 'Registro enviado',
   '/admin/login': 'Entrar na equipe',
   '/admin': 'Painel da equipe',
   '/admin/ocorrencias': 'Ocorrências',
